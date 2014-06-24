@@ -27,15 +27,30 @@ public class InputMisMatchExceptionDemo {
 		//try {
 			// top = keyboard.nextInt();
 			try {
+				//statement1
+				System.out.println("statement1");
 				findQuotient(numerator.getText(), denominator.getText());
-			} catch (ParserException e) {
+			} catch (ArithmeticException e) {
+				//statement2
+				System.out.println("statement2");
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
 				throw e;
 			} catch (BigNumberException e) {
+				//statement3
+				System.out.println("statement3");
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+			//	e.printStackTrace();
+				System.out.println("Try Enter new number with smaller than 100.");
+				//JOptionPane.showMessageDialog(null, "Try enter number between 0-100");
+			} finally {
+				//statement4
+				System.out.println("statement4");
+				//JOptionPane.showMessageDialog(null, panel);
+				System.out.println("Program continue");
 			}
+			//statement5
+			System.out.println("Statement5");
 
 	}
 
@@ -44,14 +59,14 @@ public class InputMisMatchExceptionDemo {
 
 		int top = Integer.parseInt(numerator);
 		int bottom = Integer.parseInt(denominator);
-
+/*
 		if ((top < 0) || (bottom < 0)) {
 			throw new ParserException("negative values are not excepted");
 		} else if ((top > 100) || (bottom > 100)) {
-			throw new BigNumberException();
-		} else {
+			throw new BigNumberException("too BIG!");
+		} else {*/
 			System.out.println(top / bottom);
-		}
+	//	}
 
 	}
 

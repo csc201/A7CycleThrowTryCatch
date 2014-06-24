@@ -5,5 +5,8 @@ public class BigNumberException extends Exception {
 		// TODO Auto-generated constructor stub
 		super("number is too large");
 	}
-
+	public BigNumberException(String message) {
+		// TODO Auto-generated constructor stub
+		super(message);
+	}
 }
